@@ -1,0 +1,55 @@
+<!--pages/home/index.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+<view data-weui-theme="{{theme}}">
+  <mp-loading extClass="mp-loading" show="{{showLoading}}"></mp-loading>
+  <cm-nav>
+    <view slot="left" bindtap="toDeploy" bindlongpress="toDeployText">发布动态({{articleTotal}})</view>
+  </cm-nav>
+
+  <!-- 主要内容 -->
+  <view wx:if="{{!showLoading}}" class="main">
+    <!-- 顶部 -->
+    <image  class="top-image" style="{{theme == 'dark' ? 'opacity: 0.2' : 'opacity: 0.8'}}" src="/static/images/background/home/top-default-image.png"></image>
+    <view wx:if="{{loversList.length >= 0}}" class="top-body m-3">
+      <view class="d-flex justify-content-between m-3">
+
+      
+      </view>
+    </view>
+    <!-- 文章部分 -->
+    <view wx:for="{{articleList}}" wx:key="article_list" bindtap="toArticleDetail" data-id="{{item._id}}" class="bg-white m-3 border-radius-lg p-2">
+      <!-- 发布者信息 -->
+      <view class="d-flex align-items-center justify-content-between">
+        <view class="d-flex align-items-center">
+          <image mode="widthFix" class="publisher-avatar border-radius-base" src="{{deployUsers[item._openid] ? deployUsers[item._openid].avatar:'/images/user.png'}}"></image>
+          <text class="ml-2 font-sm">{{deployUsers[item._openid].nickname}}</text>
+        </view>
+        <view class="font-base color-grey">{{item.time}}</view>
+      </view>
+      <!-- 正文简要 -->
+      <view class="d-flex align-items-center mt-2">
+        <text class="content mr-2 font-base" wx:if="{{item.files}}">{{tools.setString(item.content, 120)}}</text>
+        <text class="content-only-text font-base mb-2" wx:else>{{tools.setString(item.content, 150)}}</text>
+        <image mode="aspectFit" class="content-thumbnail" wx:if="{{item.files && item.files.length >= 1}}" src="{{item.files[0]}}"></image>
+      </view>
+      <!-- 其他信息 -->
+      <view class="d-flex align-items-center justify-content-between" wx:if="{{item.location && item.location.name}}">
+        <view class="publisher-location d-flex align-items-center">
+          <mp-icon type="field" icon="location" size="15" color="{{colorPrimary}}"></mp-icon>
+          <text class="font-base ml-1">{{item.location.name}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-loadmore" wx:if="{{loadMoreStatus == 'loading'}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{loadMoreStatus == 'nomore'}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">{{footerTip}}</view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{loadMoreStatus == 'more'}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line" bindtap="loadArticles">下拉加载更多</view>
+    </view>
+  </view>
+</view>

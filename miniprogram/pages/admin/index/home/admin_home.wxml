@@ -1,0 +1,185 @@
+<view wx:if="{{!isLoad}}" class="margin-top load loading text-l text-admin"></view>
+ 
+<view class="main-admin" wx:if="{{isLoad && isAdmin}}">
+  <image class="wave" src="../../../../images/wave.svg"></image>
+	<view class="admin-info">
+   
+		<view class="pic"><text class="icon-peoplefill"></text></view>
+		<view class="right">
+			<view class="name">
+				<text class="text-xl">{{admin.name}}</text>
+
+				<text wx:if="{{admin.type==1}}" class="tag small bg-orange light radius margin-left-s">超级管理员</text>
+				<text wx:if="{{admin.type==0}}" class="tag small bg-green radius margin-left-s">一般管理员</text>
+
+			</view>
+			<view class="desc text-s">共登录{{admin.cnt}}次，上次{{admin.last}}</view>
+		</view>
+		<view class="exit-admin" bindtap="bindExitTap"><text class="icon-exit"></text></view>
+	</view>
+
+
+	<view class="comm-list grid col-4">
+		<view class="item" bindtap="url" data-url="../../meet/list/admin_meet_list">{{data.meetCnt||'...'}}<text class="text-black">活动/预约数</text></view>
+		<view class="item" bindtap="url" data-url="../../info/admin_info_list">{{data.joinCnt||'...'}}<text class="text-black">预约数</text></view>
+		<view class="item" bindtap="url" data-url="../../user/list/admin_user_list">{{data.userCnt||'...'}}<text class="text-black">用户</text></view>
+		<view class="item" bindtap="url" data-url="../../news/list/admin_news_list">{{data.newsCnt||'...'}}<text class="text-black">文章数</text></view>
+
+	</view>
+
+	<view class="bar bg-white solid-bottom margin-top-s ">
+		<view class="action">
+			<text class="icon-title"></text>创建活动/预约内容
+		</view>
+	</view>
+
+<!--
+ -->
+
+ <view class="home">
+	<view class='nav-list_df'>
+	<!-- <view class="nav-list-left">
+			<navigator hover-class='none' url="/pages/home/dictionaries/index"  class="nav-li bg_kl">
+				<view class="nav-title">前端字典</view>
+				<view class="mt10 nav-name ">
+					千里之行<view>始于足下</view>
+				</view>
+			</navigator>
+		</view>  -->
+		<view class="nav-list-right">
+			<view hover-class='none' bindtap="url" data-url="../../meet/edit/admin_meet_edit" class="nav-li bg-cyan bg_kl2">
+				<view class="nav-title">创建活动/预约</view>
+				<view class="nav-name">
+					
+				</view>
+				<text class='cuIcon-newshotfill'></text>
+			</view>
+		
+		</view>
+
+    <view class="nav-list-right">
+		
+			<view hover-class='none' bindtap="url" data-url="../../news/add/admin_news_add" class="nav-li  bg_kl3">
+				<view class="nav-title">添加文章</view>
+				<view class="nav-name">
+					
+				</view>
+				<text class='cuIcon-{{item.icon}}'></text>
+			</view>
+		</view>
+	</view>
+
+</view>
+    <!-- <view class="cards">
+    <view class="leftCard" bindtap="url" data-url="../../meet/edit/admin_meet_edit">
+      <view class="card radius bg-green light">
+        <text class="icon-edit text-olive"></text>
+        <view class="text">创建活动/预约</view>
+      </view>
+    </view>
+    <view class="leftCard" bindtap="url" data-url="../../news/add/admin_news_add">
+      <view class="card radius bg-cyan light">
+        <text class="icon-post text-blue"></text>
+        <view class="text">添加文章</view>
+      </view>
+    </view>
+  </view> -->
+
+<!--  -->
+
+
+	<view class="bar bg-white solid-bottom margin-top-s ">
+		<view class="action">
+			<text class="icon-title"></text>功能管理
+		</view>
+	</view>
+  <view class="home">
+	<view class='nav-list_df'>
+	<view class="nav-list-left">
+			<view hover-class='none' bindtap="url" data-url="../../meet/list/admin_meet_list"  style="height: 94%;" class="nav-li bg_kl">
+				<view class="nav-title">活动/预约管理</view>
+				<view class="mt10 nav-name ">
+          <text style="font-size:38rpx;"  class="icon-activityfill text-white"></text>
+				</view>
+			</view>
+		</view> 
+		<view class="nav-list-right">
+			<view hover-class='none' bindtap="url" data-url="../../meet/yuyue/yuyue" class="nav-li bg-cyan bg_kl2">
+				<view class="nav-title">导出预约名单</view>
+				<view class="nav-name">
+					
+				</view>
+        <text class="icon-footprint text-white"></text>
+			</view>
+			<view hover-class='none' bindtap="url" data-url="../../meet/hexiao/hexiao" class="nav-li  bg_kl3">
+				<view class="nav-title">二维码核销</view>
+				<view class="nav-name">
+					
+				</view>
+				<text style="font-size:38rpx;"  class="icon-qr_code text-white"></text>
+			</view>
+		</view>
+
+    <view class="nav-list-right mynavlist">
+			<view hover-class='none' bindtap="url" data-url="../../user/list/admin_user_list" class="nav-li bg-olive bg_kl2">
+				<view class="nav-title">用户管理</view>
+				<view class="nav-name">
+					
+				</view>
+        <text style="font-size:38rpx;" class="icon-peoplefill text-white"></text>
+			</view>
+			<view hover-class='none' bindtap="url" data-url="../../news/list/admin_news_list" class="nav-li  bg-orange">
+				<view class="nav-title ">内容管理</view>
+				<view class="nav-name">
+					
+				</view>
+				<text style="font-size:38rpx;" class="icon-newsfill text-white"></text>
+			</view>
+		</view>
+	</view>
+
+</view>
+ 
+	<view class="bar bg-white solid-bottom margin-top-s ">
+		<view class="action">
+			<text class="icon-title"></text>系统管理
+		</view>
+	</view>
+
+  <view class="cards">
+    <view class="leftCard" bindtap="url" data-url='../../setup/about/admin_setup_about'>
+      <view class="card radius bg-red light ">
+        <text class="icon-edit text-darkgreen"></text>
+        <view class="text">编辑-关于我们</view>
+      </view>
+    </view>
+    <view class="leftCard"  bindtap="url" data-url='../../setup/contact/admin_setup_contact'>
+      <view class="card radius bg-orange light">
+        <text class="icon-post text-pink"></text>
+        <view class="text">编辑-联系我们</view>
+      </view>
+    </view>
+    <view class="leftCard" bindtap="url" data-url='../../setup/qr/admin_setup_qr'>
+      <view class="card radius bg-blue">
+        <text class="icon-qr_code text-mauve"></text>
+        <view class="text">程序二维码</view>
+      </view>
+    </view>
+    <view class="leftCard" bindtap="url" data-url='../../mgr/log/admin_log_list'>
+      <view class="card bg-green light radius">
+        <text class="icon-footprint text-olive"></text>
+        <view class="text">操作日志</view>
+      </view>
+    </view>
+  
+  </view>
+
+
+	<!-- BOTTOM begin -->
+
+	<!-- BOTTOM END --> 
+	<button bindtap="bindExitTap" class="btn-admin">退出登录</button> 
+
+	<view class="foot-bottom"><cmpt-foot /></view> 
+
+</view>

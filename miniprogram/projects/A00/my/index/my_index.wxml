@@ -1,0 +1,3 @@
+<import src="../../../../template/project/my_index_tpl.wxml" />
+<template is="myIndexTpl" data="{{upImg:'',user,myTodayList,skin,returnHome:false,footColor:''}}" />
+<include src="../../../../template/project/donghua.wxml"></include>

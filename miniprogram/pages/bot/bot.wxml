@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+<text>\n\n </text>
+    <view class='about-info'>云上社家智能询问助手使用手册：</view>
+<view class='about-info'>
+  1.您可以向它询问有什么社团推荐、亦可进行简单对话，例如：询问社团推荐、蓝桥杯、算法社团等内容.</view>
+
+  <view class='about-info'>
+    2.使用方式如下：点击下方的智能对话按钮使用</view>
+  <button type='primary' class='start-btn' open-type="contact">进入智能对话</button>
+</view>
+<include src="../../template/project/donghua.wxml"></include>

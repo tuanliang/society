@@ -1,0 +1,82 @@
+<block wx:if="{{isAdmin}}">
+	<cmpt-comm-list type="admin_log_list" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" sortMenusDefaultIndex="0" route="admin/log_list" topBottom="50" placeholder="搜索标题，IP地址" bind:list="bindCommListCmpt">
+
+		<!-- List Begin -->
+		<view class="admin-comm-list">
+			<view wx:if="{{dataList && dataList.total }}" class="load text-black">共有{{dataList.total}}条符合条件记录 </view>
+
+			<view class="item" wx:for="{{dataList.list}}" wx:key="key">
+				<view class="header">
+					<view class="left text-cut">{{item.LOG_TYPE_DESC}}操作</view>
+					<view class="right"></view>
+				</view>
+				<view class="info">
+          <view class="home">
+	<view class='nav-list_df'>
+		<view class="nav-list-right">
+			<view hover-class='none' class="nav-li  bg_kl3">
+				<view class="nav-title">
+          操作人:{{item.LOG_ADMIN_NAME}}
+        </view>
+				<view class="nav-name">
+					
+				</view>
+			</view>
+      	</view>
+	</view>
+</view>
+<view class="home">
+	<view class='nav-list_df'>
+		<view class="nav-list-right">
+			<view hover-class='none' class="nav-li  bg-cyan">
+				<view class="nav-title">
+          操作时间:{{item.LOG_ADD_TIME}}
+        </view>
+				<view class="nav-name">
+					
+				</view>
+			</view>
+      	</view>
+	</view>
+</view>
+<view class="home">
+	<view class='nav-list_df'>
+		<view class="nav-list-right">
+			<view hover-class='none' class="nav-li  bg-orange">
+				<view class="nav-title">
+             操作内容:{{item.LOG_CONTENT}}
+        </view>
+				<view class="nav-name">
+					
+				</view>
+			</view>
+      	</view>
+	</view>
+</view>
+<view class="home">
+	<view class='nav-list_df'>
+		<view class="nav-list-right">
+			<view hover-class='none' class="nav-li  bg-olive">
+				<view class="nav-title">
+          IP地址:{{item.LOG_ADD_IP}}
+        </view>
+				<view class="nav-name">
+					
+				</view>
+			</view>
+      	</view>
+	</view>
+</view>
+				
+				</view>
+			</view>
+		</view>
+		<!-- List END --> 
+
+		<!--load begin-->
+		<import src="../../../../template/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{dataList, skin:'text-grey'}}" />
+		<!--load end--> 
+
+	</cmpt-comm-list>
+</block>

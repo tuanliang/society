@@ -1,0 +1,51 @@
+<view class="wrap">
+
+  <view class="container">
+
+ 
+<swiper class="banner" indicator-dots autoplay interval="3000" circular>
+  <swiper-item wx:for="{{lunbotu}}" wx:key="index"> 
+    <image src="{{item.photo}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+    <!-- 第二节 热门推荐 -->
+    <view class="tabbar">
+      <view class="item">热门推荐</view>
+      <!-- <view class="item">避暑露营</view>
+      <view class="item">网红打卡</view>
+      <view class="item">秘境探访</view> -->
+    </view>
+    <view class="view-list">
+
+      <view class="view-item" wx:for="{{article}}" wx:key="index" bindtap="gotocontent" data-id="{{item._id}}" wx:if="{{index<4}}">
+        <image src="{{item.thumbnail}}" mode="aspectFill"></image>
+        <view class="location">
+          <view class="name">{{item.title}}</view>
+          <view class="position">
+            <image src="/images/location.svg"></image>
+            <view>{{item.location}}</view>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+    <!-- 第三节 猜您喜欢 -->
+    <view class="likemore">
+      <view class="like">
+        猜您喜欢
+      </view>
+      <view class="more">
+        发现更多
+      </view>
+    </view>
+    <view class="likelist">
+      <view class="likelist-item"  wx:for="{{dibu}}" wx:key="index" bindtap="gotohuodong">
+        <image src="{{item.photo}}" mode="aspectFill" ></image>
+        <view class="likelist-tit">更多社团</view>
+      </view>
+     
+    </view>
+
+  </view>
+</view>

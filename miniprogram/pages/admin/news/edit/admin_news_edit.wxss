@@ -1,0 +1,130 @@
+@import '../../../../style/project/base/admin.wxss'; 
+.nav-li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -10%;
+  border-radius: 10rpx;
+  opacity: 0.2;
+  transform: scale(0.9, 0.9);
+} 
+
+ .nav-li.cur {
+  color: #fff;
+  background: rgb(94, 185, 94);
+  box-shadow: 4rpx 4rpx 6rpx rgba(94, 185, 94, 0.4);
+} 
+
+.nav-title {
+  font-size: 20rpx;
+  font-weight: 300;
+}
+
+.nav-title::first-letter {
+  font-size: 40rpx;
+  margin-right: 4rpx;
+}
+
+ .nav-name {
+  font-size: 24rpx;
+  text-transform: Capitalize;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.nav-name::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40rpx;
+  height: 6rpx;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.nav-name::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100rpx;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  right: 40rpx;
+  opacity: 0.3;
+}
+
+.nav-name::first-letter {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-right: 1px;
+}
+.nav-li text {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+} .nav-list_df{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80rpx;
+  /* margin: 20rpx;
+  height: 280rpx; */
+} 
+.nav-list-left{
+  width: calc(50% - 10rpx) ;
+}
+.nav-list-right{
+  width:calc(100% - 10rpx) ;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.mynavlist{
+  width:calc(38% - 10rpx) ;
+}
+
+.nav-li {
+
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+ 
+ .home {
+  padding-bottom: 5px;
+  width: 100%;
+}  .bg_kl {
+  background: #c16550;
+  color: #fff
+}
+.bg_my{
+  background:#68e27c;
+  color: #000
+}
+.bg_kl3 {
+  background: #f2bf80;
+  color: #fff
+}  .mt10 {
+  margin-top: 20px !important;
+} 
+.cuIcon-newshotfill{
+  font-size: 12rpx;
+}
+.bg_kl2 {
+  background: #40749c;
+  color: #fff
+}

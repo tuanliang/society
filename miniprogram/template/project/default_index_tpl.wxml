@@ -1,0 +1,127 @@
+<template name="defaultIndexTpl">
+
+	<view class="main">
+		<view class="up">
+			<image mode="aspectFill" src="{{upImg}}" />
+		</view>
+		<view class="down">
+			<view class="menu card-project shadow-project">
+
+        <view  class="item" bindtap="gotoShetuan" >
+					<view class="item-inner">
+            <view class="img" style="text-align: center;"><image  src="../../skin/images/menu/11.png" /></view>
+            <view class="text">
+              <view class="title">社团推荐</view>
+            </view>
+					</view>
+				</view>
+
+				<view bindtap="url" data-url="../../news/index/news_index?id={{item.val}}" class="item" wx:for="{{skin.newsCateArr}}" wx:key="key">
+					<view class="item-inner">
+						<view class="img"><image src="../../skin/images/menu/news_{{item.val}}.png" /></view>
+						<view class="title">{{item.label}}</view>
+					</view>
+				</view>
+       
+        <view  class="item" bindtap="gotoyouxi" >
+					<view class="item-inner">           
+          	<view class="img" ><image mode="widthFix" src="../../skin/images/menu/meet_1.png" /></view>            
+            <view class="title">休闲游戏</view>           
+					</view>
+				</view>
+
+<!-- 
+        <view class="cards">
+    <view class="leftCard">
+      <view class="card bg-orange radius " bindtap="gotoShetuan">
+        <text style="font-size:50rpx" class="icon-peoplefill text-project"></text>
+        <view class="text" >社团推荐</view>
+      </view>
+    </view>
+    <view class="leftCard">
+      <view class="card bg-darkgreen light radius " bindtap="url" data-url="../../news/index/news_index?id=2" >
+        <text style="font-size:50rpx" class="icon-peoplefill text-project"></text>
+        <view class="text" >社团简介</view>
+      </view>
+    </view>
+    <view class="leftCard">
+      <view class="card bg-darkgreen radius " bindtap="url" data-url="../../news/index/news_index?id=3">
+        <text style="font-size:50rpx" class="icon-peoplefill text-project"></text>
+        <view class="text" >社团招新</view>
+      </view>
+    </view>
+    <view class="leftCard">
+      <view class="card bg-blue radius " bindtap="gotoyouxi">
+        <text style="font-size:50rpx" class="icon-peoplefill text-project"></text>
+        <view class="text" >休闲游戏</view>
+      </view>
+    </view>
+  </view> -->
+        <!-- <view  class="item" bindtap="gotobot" >
+					<view class="item-inner">           
+          	<view class="img" ><image mode="widthFix" src="../../skin/images/menu/news_4.png" /></view>            
+            <view class="title">智能询问</view>           
+					</view>
+				</view> -->
+        <!-- <image bindtap="gotoShetuan" mode="widthFix" class="lovers-avatar border-radius-circle" src="../../../../images/4.png"></image> -->
+         <!-- 跳转 -->
+        <!-- <image bindtap="gotoJiNianri" mode="widthFix" class="lovers-avatar border-radius-circle" src="../../../../images/4.png"></image> -->
+       
+      <!-- </view> -->
+			</view>
+
+  <view class="home">
+	<view class='nav-list_df'>
+		 <view class="nav-list-left" bindtap="gotobot">
+			<navigator hover-class='none' style="height:96%;" class="nav-li bg_kl">
+				<view class="nav-title">智能询问</view>
+				<view class="mt10 nav-name ">
+					云上社家<view>询问助手</view>
+				</view>
+			</navigator>
+		</view> 
+    <view class="nav-list-right">
+			<view hover-class='none' bindtap="url" data-url="../../meet/index/meet_index?id=1" class="nav-li bg-cyan bg_kl2">
+				<view class="nav-title">报名社团</view>
+        <text style="font-size:40rpx;" class="icon-friend my-icon-project text-purple"></text>
+				<view class="nav-name">
+					
+				</view>
+				<text class='cuIcon-newshotfill'></text>
+			</view>
+			<view hover-class='none' bindtap="url" data-url="../../meet/index/meet_index?id=2" class="nav-li  bg_kl3">
+				<view class="nav-title">预约门票</view>
+        <text style="font-size:40rpx;" class="icon-activityfill my-icon-project text-project"></text>
+				<view class="nav-name">
+					
+				</view>
+				<text class='cuIcon-{{item.icon}}'></text>
+			</view>
+		</view>
+	</view>
+	<view class="main_title">
+		<view class="min_height cu-bar">
+			<view class="action sub-title">
+				<text class="text-xl text-bold text-tree">精选Top </text>
+				<text class="text-ABC text-tree">Boutique </text>
+			</view>
+
+		</view>
+		<view>
+		</view>
+	</view>
+</view>
+			<!-- List Begin -->
+			<view wx:if="{{!dataList}}" class="margin-top load loading text-l load-project"></view>
+			<import src="../../template/public/base_list_tpl.wxml" />
+			<template is="baseListTpl" data="{{dataList,listMode}}" />
+			<!-- List END -->
+		</view>
+	</view>
+
+	<block wx:if="{{skin.IS_SUB}}">
+		<import src="../../template/public/menu_tpl.wxml" />
+		<template is="menuTpl" data="{{skin,curMenu:'home_index',returnHome}}" />
+	</block>
+
+</template>

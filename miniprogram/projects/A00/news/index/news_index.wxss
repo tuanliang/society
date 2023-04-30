@@ -1,0 +1,11 @@
+@import "../../../../style/project/base/appt.wxss";
+@import "../../skin/skin.wxss"; 
+@import "../../../../style/project/news_index_base.wxss";  
+@import "../../../../style/project/donghua.wxss";
+.mybanner {
+  width: 100%;
+  height: 250rpx;
+margin-left: 85rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}

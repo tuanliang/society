@@ -1,0 +1,33 @@
+/**index.wxss**/
+@import "../../../style/project/donghua.wxss";
+page {
+  display: flex; font-size: 32rpx;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* background-image: url("../../../images/7ED496E51CCC8B260B34044538740B0E.png"); */
+  background-image: url('https://636c-cloud1-6gne6yf68e8fc781-1315827669.tcb.qcloud.la/%E8%B5%84%E6%BA%90/74AFAA29180C6CC6DB4C7EB949D3A321.png?sign=d8d271f7f36fb92972cc08ae8d06313a&t=1680944464');
+}
+.about-info{  color: #000;
+  letter-spacing: 10px;
+  text-align: left;
+  text-indent: 50px;
+  text-decoration: underline;
+  text-decoration-color:aqua;
+  line-height: 30px;
+  white-space: normal;}
+.level-box{padding-top: 6%;}
+.start-btn{width: 40%; margin-bottom: 30rpx;}
+.img-box{width: 100%; text-align: center;}
+.userinfo-avatar {
+  display: inline-block; width: 160rpx; height: 160rpx; margin: 20rpx; padding: 0;
+  border-radius: 50%; background-size: cover; background-color: white;
+  vertical-align: middle;
+}
+.user-img{width: 100%; height: 100%;}
+.about-btn{text-align: center; position: fixed; left: 0; right: 0; bottom: 10rpx; color: #ddd;}
+.weather-bg{
+  text-align: center;
+  font-size:40rpx;
+  line-height:1.4;
+  opacity:0.65;
+}

@@ -1,0 +1,74 @@
+<view class="husky data-v-d2948e50" style="{{$root.s0}}">
+
+<view class="husky-mane data-v-d2948e50">
+  <view class="husky-coat data-v-d2948e50"></view>
+</view>
+<view class="husky-body data-v-d2948e50">
+  <view class="husky-head data-v-d2948e50">
+    <view class="husky-ear data-v-d2948e50">
+      <view class="husky-ear_after data-v-d2948e50"></view>
+      <view class="husky-ear_before data-v-d2948e50"></view>
+    </view>
+    <view class="husky-ear2 data-v-d2948e50">
+      <view class="husky-ear data-v-d2948e50">
+        <view class="husky-ear_after data-v-d2948e50"></view>
+        <view class="husky-ear_before data-v-d2948e50"></view>
+      </view>
+    </view>
+    <view class="husky-head_before data-v-d2948e50"></view>
+    <view class="husky-face data-v-d2948e50">
+      <view class="husky-face_before data-v-d2948e50"></view>
+      <view class="husky-eye data-v-d2948e50">
+        <view class="husky-eye_before data-v-d2948e50"></view>
+      </view>
+      <view class="husky-eye data-v-d2948e50">
+        <view class="husky-eye_before data-v-d2948e50"></view>
+      </view>
+      <view class="husky-nose data-v-d2948e50">
+        <view class="husky-nose_after data-v-d2948e50"></view>
+        <view class="husky-nose_before data-v-d2948e50"></view>
+      </view>
+      <view class="husky-mouth data-v-d2948e50">
+        <view class="husky-mouth_before data-v-d2948e50"></view>
+        <view class="husky-mouth_after data-v-d2948e50"></view>
+        <view class="husky-lips data-v-d2948e50">
+          <view class="husky-lips_before data-v-d2948e50"></view>
+          <view class="husky-lips_after data-v-d2948e50"></view>
+        </view>
+        <view class="husky-tongue data-v-d2948e50"></view>
+      </view>
+    </view>
+  </view>
+  <view class="husky-torso data-v-d2948e50">
+    <view class="husky-torso_before data-v-d2948e50"></view>
+    <view class="husky-torso_after data-v-d2948e50"></view>
+  </view>
+</view>
+<view class="husky-legs data-v-d2948e50">
+  <view class="husky-front-legs data-v-d2948e50">
+    <view class="husky-front-legs_before data-v-d2948e50"></view>
+    <view class="husky-leg data-v-d2948e50">
+      <view class="husky-leg_before data-v-d2948e50"></view>
+    </view>
+    <view class="husky-leg data-v-d2948e50">
+      <view class="husky-leg_before data-v-d2948e50"></view>
+    </view>
+  </view>
+  <view class="husky-hind-leg data-v-d2948e50">
+    <view class="husky-hind-leg_before data-v-d2948e50"></view>
+  </view>
+</view>
+<view class="husky-tail data-v-d2948e50">
+  <view class="husky-tail data-v-d2948e50">
+    <view class="husky-tail data-v-d2948e50">
+      <view class="husky-tail data-v-d2948e50">
+        <view class="husky-tail data-v-d2948e50">
+          <view class="husky-tail data-v-d2948e50">
+            <view class="husky-tail data-v-d2948e50"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

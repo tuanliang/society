@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class='img-box'>
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+ 
+    ><image class='user-img' src='../../../images/user.png'></image></button>
+    
+  </view>
+  <button type='primary' class='start-btn' open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo" bindtap='btnClickEvn'>开始挑战</button>
+      <view class='about-info'>    一款能够花更少的时间就能大大提高使用者记忆的娱乐小游戏。\n</view>
+      <view class='about-info'>    每次需要选择两个相同的狗狗</view>
+</view>
+<include src="../../../template/project/donghua.wxml"></include>

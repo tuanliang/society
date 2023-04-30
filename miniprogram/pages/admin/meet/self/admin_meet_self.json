@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+	 
+	},
+	"navigationBarBackgroundColor": "#ADD8E6",
+	"navigationBarTextStyle": "white", 
+	"enablePullDownRefresh": true,  
+	"navigationBarTitleText": "用户自助签到码"
+}

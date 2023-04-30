@@ -1,0 +1,46 @@
+<block wx:if="{{isAdmin}}">
+	<cmpt-comm-list type="admin-meet" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="admin/meet_list" sortMenusDefaultIndex="0" topBottom="50" placeholder="搜索标题" bind:list="bindCommListCmpt">
+
+	
+		<!-- List Begin -->
+		<view class="admin-comm-list">
+			<view wx:if="{{dataList && dataList.total }}" class="load text-grey">共有{{dataList.total}}条符合条件记录 </view>
+
+			<view class="item" wx:for="{{dataList.list}}" wx:key="key">
+				<view class="header">
+					<view class="left text-cut"><text wx:if="{{item.MEET_ORDER==0}}" class="text-black" style="font-weight:normal;font-size:24rpx">[置顶]</text> {{item.MEET_TITLE}}
+					</view>
+					<view class="right" bindtap="bindScanTap" data-id="{{item._id}}" data-title="{{item.MEET_TITLE}}">
+						<text class="icon-scan"></text>
+					</view>
+				</view>
+
+				<view class="info">
+
+<!--  -->     
+          <view class="cards">
+              <view class="leftCard">
+      <view class="card bg-grey radius " bindtap="bindhexiao"  ata-id="{{item._id}}" data-title="{{item.MEET_TITLE}}" >
+        <text style="font-size:50rpx;" class="icon-peoplefill text-project"></text>
+        <view class="text" >扫码核销</view>
+      </view>
+    </view>
+    </view> 
+
+
+          <!--  -->
+			
+				</view>
+			</view>
+		</view>
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../template/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{skin:'text-grey',dataList}}" />
+		<!--load end-->
+ 
+
+	</cmpt-comm-list>
+
+</block>

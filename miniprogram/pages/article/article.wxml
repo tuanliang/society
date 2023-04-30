@@ -1,0 +1,42 @@
+<view class="wrap">
+  <view class="thumbnail">
+    <image src="{{content.thumbnail}}" mode="aspectFill"></image>
+  </view>
+  <view class="article">
+    <view class="content">
+      <view class="title">
+        {{content.title}}
+      </view>
+      <view class="author">
+        <view class="author-item">
+          <image src="/images/user.png"></image>
+          <view class="author-content">
+            <view class="name">{{content.name}}</view>
+            <view class="slogan">{{content.slogan}}</view>
+          </view>
+        </view>
+        <view class="follow" bindtap="gotohuodong">
+          去看看
+        </view>
+      </view>
+      <view class="detail">
+        <view class="detail-item">
+          <view class="detail-title">位置坐标</view>
+          <view class="detail-content">{{content.location}}</view>
+        </view>
+        <view class="detail-item">
+          <view class="detail-title">发布时间</view>
+          <view class="detail-content">{{contetn.time}}</view>
+        </view>
+        <view class="detail-item">
+          <view class="detail-title">社团人数</view>
+          <view class="detail-content">{{content.cost}}</view>
+        </view>
+      </view>
+      <view class="article-con">
+          <rich-text nodes="{{content.content}}"/>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,4 @@
+<import src="../../../../template/project/calendar_index_tpl.wxml" />
+<template is="calendarIndexTpl" data="{{skin,day,hasDays,isLoad,list}}" />
+<include src="../../../../template/project/donghua.wxml" /> 
+

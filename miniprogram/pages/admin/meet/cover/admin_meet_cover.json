@@ -1,0 +1,7 @@
+{
+	"usingComponents": {  
+	},
+	"navigationBarBackgroundColor": "#ADD8E6",
+	"navigationBarTextStyle": "white", 
+	"navigationBarTitleText": "后台-预约封面设置"
+}

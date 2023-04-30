@@ -1,0 +1,249 @@
+@import "../../../../style/project/base/appt.wxss";
+@import "../../skin/skin.wxss";
+@import "../../../../style/project/default_index_base.wxss";
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx 20rpx; 
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+.cards .leftCard {
+  flex: 1;
+  margin-right: 20rpx;
+  height: 250rpx;
+}
+.leftCard .card {
+  width: 100%;
+  height: 100%;
+}
+.rightCard {
+  width: 45%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rightCard .card {
+  height: 115rpx;
+  width: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25rpx;
+}
+.card .iconfont {
+  font-size: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.up image {
+	width: 100%;
+	height: 550rpx;
+}  
+ 
+.menu .item {
+    width: 25%; 
+}
+.lovers-avatar{
+  width: 150rpx;
+  height: 150rpx;
+  box-shadow: 0 0 10px #FEB5B6;
+  border: solid #ffffff 2px;
+  margin: 0 auto;
+  z-index: 9999999;
+}
+.my_color{
+  background-color: var(--calendarLightColor)
+}
+
+.nav-li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -10%;
+  border-radius: 10rpx;
+  opacity: 0.2;
+  transform: scale(0.9, 0.9);
+} 
+
+ .nav-li.cur {
+  color: #fff;
+  background: rgb(94, 185, 94);
+  box-shadow: 4rpx 4rpx 6rpx rgba(94, 185, 94, 0.4);
+} 
+
+.nav-title {
+  font-size: 32rpx;
+  font-weight: 300;
+}
+
+.nav-title::first-letter {
+  font-size: 40rpx;
+  margin-right: 4rpx;
+}
+
+ .nav-name {
+  font-size: 24rpx;
+  text-transform: Capitalize;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.nav-name::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40rpx;
+  height: 6rpx;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.nav-name::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100rpx;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  right: 40rpx;
+  opacity: 0.3;
+}
+
+.nav-name::first-letter {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-right: 1px;
+}
+.nav-li text {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+} .nav-list_df{
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx;
+  height: 280rpx;
+} 
+.nav-list-left{
+  width: calc(35% - 10rpx) ;
+}
+.nav-list-right{
+  width:calc(65% - 10rpx) ;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.nav-li {
+  padding: 30rpx;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+ 
+ .home {
+  padding-bottom: 5px;
+}  .bg_kl {
+  background: #c16550;
+  color: #fff
+}
+.bg_kl3 {
+  background: #f2bf80;
+  color: #fff
+}  .mt10 {
+  margin-top: 20px !important;
+} 
+.main_title {
+  background-color: #fff;
+  padding: 20rpx 0px;
+  padding-bottom: 0px;
+  margin: 0px 20rpx;
+}
+.min_height {
+  min-height: auto;
+  width: 98px;
+}
+.action {
+  font-size: 50rpx;
+}
+.cu-bar {
+	display: flex;
+	position: relative;
+	align-items: center;
+	min-height: 100rpx;
+	justify-content: space-between;
+}
+
+.cu-bar .action {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+	max-width: 100%;
+}
+.cu-bar .action.sub-title {
+	position: relative;
+	top: -0.2rem;
+}
+
+.cu-bar .action.sub-title text {
+	position: relative;
+	z-index: 1;
+}
+
+.cu-bar .action.sub-title text[class*="bg-"]:last-child {
+	position: absolute;
+	display: inline-block;
+	bottom: -0.2rem;
+	border-radius: 6rpx;
+	width: 100%;
+	height: 0.6rem;
+	left: 0.6rem;
+	opacity: 0.3;
+	z-index: 0;
+}
+
+.cu-bar .action.sub-title text[class*="text-"]:last-child {
+	position: absolute;
+	display: inline-block;
+	bottom: -0.7rem;
+	left: 0.5rem;
+	opacity: 0.2;
+	z-index: 0;
+	text-align: right;
+	font-weight: 900;
+	font-size: 36rpx;
+}
+.text-xl {
+	font-size: 36rpx;
+}
+.text-bold {
+	font-weight: bold;
+}
+.text-ABC {
+	text-transform: Uppercase;
+}
+.text-tree{
+	color:#d69c63
+}

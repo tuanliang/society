@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+ 
+	},
+	"navigationBarBackgroundColor": "#ADD8E6",
+	"navigationBarTextStyle": "white", 
+	"disableScroll": true, 
+	"navigationBarTitleText": "预约名单管理"
+}
